@@ -18,4 +18,6 @@ public interface ProductInventoryMapper {
 	public void delete(Long id);
 	@Select("SELECT * FROM product_inventory WHERE id=#{id}")  
 	public ProductInventory findById(Long id);
+	@Select("SELECT * FROM product_inventory WHERE product_id=#{productId}")  
+	public ProductInventory findByProductId(Long productId);
 }
